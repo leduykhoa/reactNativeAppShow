@@ -5,6 +5,10 @@
  */
 
 import React, { Component } from 'react';
+
+import FormUploadComponent from './src/components/FormUploadComponent';
+
+
 import {
   Platform,
   StyleSheet,
@@ -27,6 +31,7 @@ export default class App extends Component<Props> {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
+        <FormUploadComponent/>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>

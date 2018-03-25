@@ -3,6 +3,7 @@ package com.reactnativeappshow;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.fileopener.FileOpenerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -10,6 +11,9 @@ import com.facebook.soloader.SoLoader;
 
 import java.util.Arrays;
 import java.util.List;
+
+import com.rnfs.RNFSPackage; // <------- add package
+
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -22,7 +26,9 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new FileOpenerPackage(), // <---- add comma
+          new RNFSPackage() // <---------- add package
       );
     }
 
